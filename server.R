@@ -31,7 +31,7 @@ shinyServer(
   		}, options = list(bSortClasses = TRUE))
 
 		#Draw ggplot based/reactive on user input
-		output$plot <- reactivePlot(function() {
+		output$plot <- renderPlot(function() {
 
 			p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
 			
