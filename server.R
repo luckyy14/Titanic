@@ -8,7 +8,7 @@ library(ggplot2)
 
 trainData <- read.csv("./data/train.csv")
 
-shinyServer(
+
 	function(input, output) {
 
 		#Option to choose sample size
@@ -48,4 +48,3 @@ shinyServer(
 
 			}, height=700)
 	}
-)
