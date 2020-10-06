@@ -50,7 +50,6 @@ shinyUI(fluidPage(
             tags$li('cabin - Cabin'), 
             tags$li('cabin - Cabin')
             ),  
-		strong('SPECIAL NOTES:'),
 			 ),
 	
 	 mainPanel(
