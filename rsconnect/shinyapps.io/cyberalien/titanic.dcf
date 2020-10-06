@@ -1,0 +1,10 @@
+name: titanic
+title:
+username:
+account: cyberalien
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2953356
+bundleId: 3708288
+url: https://cyberalien.shinyapps.io/titanic/
+when: 1601986855.3182
