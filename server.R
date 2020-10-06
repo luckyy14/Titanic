@@ -12,15 +12,15 @@ trainData <- read.csv("./data/train.csv")
 	function(input, output) {
 
 		#Option to choose sample size
-		dataset <- reactive(function() {
+		dataSet <- reactive(function() {
 			trainData[sample(nrow(trainData), input$sampleSize), ]
 			})
 		
 		#Option to download the Dataset
 		output$downloadData <- downloadHandler(
-    		filename = function() { paste(input$dataset, '.csv', sep='') },
+    		filename = function() { paste(input$dataSet, '.csv', sep='') },
     		content = function(file) {
-      		write.csv(dataset(), file)
+      		write.csv(dataSet(), file)
     		}
   		)
   		
@@ -30,8 +30,8 @@ trainData <- read.csv("./data/train.csv")
 
 		#Draw ggplot based/reactive on user input
 		output$plot <- renderPlot({
-
-			p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+      m<-dataSet()
+			p <- ggplot(m, aes_string(x=input$x, y=input$y)) + geom_point()
 			
 			if (input$color != 'None') 
 				p <- p + aes_string(color=input$color)
