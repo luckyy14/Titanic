@@ -9,7 +9,7 @@ library(ggplot2)
 trainData <- read.csv("./data/train.csv")
 
 dataset <- trainData
-
+shiny.deprecation.messages=FALSE
 shinyServer(
 	function(input, output) {
 
@@ -31,7 +31,7 @@ shinyServer(
   		}, options = list(bSortClasses = TRUE))
 
 		#Draw ggplot based/reactive on user input
-		output$plot <- renderPlot(function() {
+		output$plot <- reactivePlot(function() {
 
 			p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
 			
