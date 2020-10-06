@@ -33,7 +33,7 @@ shinyServer(
 		#Draw ggplot based/reactive on user input
 		output$plot <- reactivePlot(function() {
 
-			p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+			# <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
 			
 			if (input$color != 'None') 
 				p <- p + aes_string(color=input$color)
