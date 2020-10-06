@@ -8,13 +8,13 @@ dataset <- trainData
 
 
 shinyUI(fluidPage(
-	navbarPage("Coursera Developing Data Products MOOC"
+	navbarPage("Data Analytics course"
 		# navbarMenu("Links ",
   #   		tabPanel$a(href = "https://www.kaggle.com/c/titanic-gettingStarted", "Kaggle Titanic Challenge"),
   #   		tabPanel("Table")
   #   	)
 	),
-	titlePanel("Intro Kaggle's Titanic Challenge"),
+	titlePanel("Titanic"),
 	sidebarLayout(
 	 sidebarPanel(
 		
@@ -72,25 +72,6 @@ shinyUI(fluidPage(
 	
 	 mainPanel(
 		h2('Basic Introductory Exploratory Analysis'),
-		p('Please note that this is a very basic App intended to provide some introductory (really, really basic) exploratory analysis.'),
-		p("It uses solely the training dataset on Kaggle's Titanic challenge, which you can download here, or on Kaggle's page:"),
-		a("https://www.kaggle.com/c/titanic-gettingStarted"),
-		#img(src ="./figures/titanic.png", height = 200, width = 200),
-		p('It is inspired on Trevor Stephens R tutorial, which I highly recommend if you are getting started to R:'),
-		a('http://trevorstephens.com/post/72916401642/titanic-getting-started-with-r'),
-		h4('Getting Started with this Web App'),
-		p('On the side panel you can change the variables that are injected to the plot (from ggplot2 library).'),
-		p('You can change which variable go the the X-axis, Y-axis, color by variable, and include jitter, smooth, and row/column facets.'),
-		p('Use it to your advantage in order to extract the maximum logic conclusions out of the plot for latter implementation of Machine Learning Algorithms.'),
-		strong('About the plot'),
-		p('The plot has already some variables choosen by default, to help you interprete the data.'),
-		p('From the default settings, the plot is intended to allow the comparison among some variables:'),
-		tags$ul(
-			tags$li('Compare the sex of the Survivors. Any prevaling?'),
-			tags$li('Compare the classes of Passengers. Any class with more survivors?'),
-			tags$li('Compare age of Passengers. Any prevaling?')
-		),
-		
 		plotOutput('plot'),
 		tags$br(),
 		tags$br(),
@@ -110,7 +91,7 @@ shinyUI(fluidPage(
 		tags$br(),
 		tags$br(),
 		h4('Training Dataset'),
-		p('Finally, you can view the raw training dataset and play with it as well.'),
+		p('You can view the raw training dataset'),
 		tags$br(),
 		tabPanel('trainData', dataTableOutput('mytable1'))
 				
