@@ -50,6 +50,8 @@ shinyUI(fluidPage(
             tags$li('cabin - Cabin'), 
             tags$li('cabin - Cabin')
             ),  
+			 ),
+	
 	 mainPanel(
 		h2('Basic Introductory Exploratory Analysis'),
 		plotOutput('plot'),
