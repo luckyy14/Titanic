@@ -7,10 +7,7 @@ trainData <- read.csv("./data/train.csv")
 #####Checking the data first
 #summary(trainData)
 #str(trainData)
-##Check to see if any NAs
-#sum(is.na(trainData$Pclass)) #nop
-#sum(is.na(trainData$Sex)) #nop
-#sum(is.na(trainData$Age)) #Yes: 177!
+
 	
 #Collection of plots
 
