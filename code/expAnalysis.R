@@ -13,7 +13,9 @@ trainData <- read.csv("./data/train.csv")
 #sum(is.na(trainData$Age)) #Yes: 177!
 	
 #Collection of plots
-g <- ggplot(trainData, aes(Age, Pclass))
+
+ggplot(trainData, aes(Age, Pclass))
+g<-ggplot(trainData, aes(Age, Pclass))
 p11 <- g + geom_point(aes(color=Sex)) 
 p12 <- g + geom_point(aes(color=Sex)) + labs(title="Titanic intro Exploratory Analysis") + labs(x="Age of Passenger", y="Passenger Class on boat(1-3)")
 p21 <- g + geom_point(aes(color=Sex)) + facet_grid(Survived ~.)
